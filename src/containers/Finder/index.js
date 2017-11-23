@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import {
     Text,
     View,
     TextInput,
     TouchableHighlight
-} from 'react-native';
+} from 'react-native'
 
-import styles from './styles';
+import styles from './styles'
 
 
 const Finder = () => (
@@ -19,6 +19,6 @@ const Finder = () => (
           <Text style={styles.buttonText}>Search</Text>
         </TouchableHighlight>
   </View>
-);
+)
 
-export default Finder;
+export default Finder

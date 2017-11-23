@@ -1,10 +1,3 @@
-import React from 'react';
-import Finder from './src/containers/Finder';
+import Root from './src/index'
 
-export default class App extends React.Component {
-  render() {
-    return (
-        <Finder />
-    );
-  }
-}
+export default Root;

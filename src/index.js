@@ -1,8 +1,13 @@
 import React from 'react';
-import App from './containers/App';
+import { Provider } from 'react-redux'
+
+import store from './store'
+import App from './containers/App'
 
 const Root = () => (
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
-export default Root;
+export default Root

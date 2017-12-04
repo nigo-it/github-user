@@ -5,9 +5,11 @@ import {
     TextInput,
     TouchableHighlight
 } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 
 import styles from './styles'
 
+const showProfile = () => Actions.profile()
 
 const Finder = () => (
   <View style={styles.container}>
@@ -15,6 +17,7 @@ const Finder = () => (
         <TextInput style={styles.searchbox}/>
         <TouchableHighlight
          style={styles.button}
+         onPress={showProfile}
         >
           <Text style={styles.buttonText}>Search</Text>
         </TouchableHighlight>

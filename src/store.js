@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
+import ProfileReducer from './containers/Profile/reducer'
 
-const fakeReducer = () => {}
-const store = createStore(fakeReducer)
+const store = createStore(ProfileReducer)
 
 export default store

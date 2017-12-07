@@ -4,16 +4,16 @@ import {
     FAILED_PROFILE
 } from './constants'
 
-export const requestedProfile = () => ({
+export const requestProfile = () => ({
     type: REQUESTED_PROFILE,
 })
 
-export const receivedProfile = (profile) => ({
+export const receiveProfile = (profile) => ({
     type: RECEIVED_PROFILE,
     data: profile,
 })
 
-export const failedProfile = () => ({
+export const failProfile = () => ({
     type: FAILED_PROFILE,
 })
 

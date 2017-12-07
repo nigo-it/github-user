@@ -4,10 +4,16 @@ import {
     View
 } from 'react-native'
 
-const Profile = () => (
+import getProfile from './actionsCreator'
+
+const Profile = () => {
+  getProfile('nicsnet')
+    
+  return (
     <View>
       <Text>I'm a profile</Text>
     </View>
-)
+  )
+}
 
 export default Profile

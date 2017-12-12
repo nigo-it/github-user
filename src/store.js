@@ -1,9 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
+import { createLogger } from 'redux-logger'
 
-import ProfileReducer from './containers/Profile/reducer'
+import ProfileReducer from './containers/Finder/reducer'
 
 const reducers = combineReducers({ ProfileReducer })
-const store = createStore(reducers , applyMiddleware(thunk))
+
+const middlewares = [thunk]
+const logger = createLogger()
+middlewares.push(logger)
+
+const store = createStore(reducers , applyMiddleware(...middlewares))
 
 export default store

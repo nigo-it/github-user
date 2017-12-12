@@ -2,16 +2,27 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {
     Text,
-    View
+    View,
+    ActivityIndicator,
+    Image,
 } from 'react-native'
+
+import styles from './styles'
 
 const Profile = ({ data, loading }) => {
   const profileView = !data && loading ?
-    <Text>Loading</Text> :
-    <Text>{data.name}</Text>
+      <ActivityIndicator
+        animating={loading}
+        color='#111'
+        size='large'
+      /> :
+      <Image
+        source={{uri: data.avatar_url}}
+        style={styles.image}
+      />
 
   return (
-    <View>
+    <View style={styles.container}>
       {profileView}
     </View>
   )

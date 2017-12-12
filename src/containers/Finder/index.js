@@ -20,7 +20,10 @@ const Finder = ({ getProfile }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.sometext}>Search Github User</Text>
-      <TextInput style={styles.searchbox}/>
+      <TextInput
+        autoCapitalize = 'none'
+        style={styles.searchbox}
+      />
       <TouchableHighlight
        style={styles.button}
        onPress={showProfile}

@@ -4,7 +4,9 @@ import { createLogger } from 'redux-logger'
 
 import ProfileReducer from './containers/Finder/reducer'
 
-const reducers = combineReducers({ ProfileReducer })
+const reducers = combineReducers({
+  profile: ProfileReducer
+})
 
 const middlewares = [thunk]
 const logger = createLogger()

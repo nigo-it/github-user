@@ -1,15 +1,27 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import {
     Text,
     View
 } from 'react-native'
 
-const Profile = () => {
+const Profile = ({ data, loading }) => {
+  const profileView = !data && loading ?
+    <Text>Loading</Text> :
+    <Text>{data.name}</Text>
+
   return (
     <View>
-      <Text>I'm a profile</Text>
+      {profileView}
     </View>
   )
 }
 
-export default Profile
+const mapStateToProps = ({ profile: { data, loading } }) => (
+  {
+    data,
+    loading
+  }
+)
+
+export default connect(mapStateToProps)(Profile)

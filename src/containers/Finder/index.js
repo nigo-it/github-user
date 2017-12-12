@@ -29,10 +29,10 @@ const Finder = ({ getProfile }) => {
       </TouchableHighlight>
     </View>
   )
-};
+}
 
 const mapDispatchToProps = ({
   getProfile
-});
+})
 
 export default connect(null, mapDispatchToProps)(Finder)

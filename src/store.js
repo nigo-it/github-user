@@ -1,6 +1,17 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { createLogger } from 'redux-logger'
 
-const fakeReducer = () => {}
-const store = createStore(fakeReducer)
+import ProfileReducer from './containers/Finder/reducer'
+
+const reducers = combineReducers({
+  profile: ProfileReducer
+})
+
+const middlewares = [thunk]
+const logger = createLogger()
+middlewares.push(logger)
+
+const store = createStore(reducers , applyMiddleware(...middlewares))
 
 export default store
